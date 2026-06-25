@@ -26,7 +26,7 @@
   <main>
     <section>
       <h2>Formulario completo</h2>
-      <form action="contacto.html" method="post" autocomplete="on" aria-label="Formulario de contacto y soporte">
+      <form action="contacto.html" method="post" autocomplete="on" aria-label="Formulario de contacto y soporte" data-contact-form>
         <input type="hidden" name="origen" value="web-techstore">
 
         <fieldset>
@@ -114,6 +114,7 @@
           <input type="reset" value="Limpiar datos">
           <button type="button">Boton secundario</button>
         </div>
+        <p class="app-message" data-contact-feedback></p>
       </form>
     </section>
   </main>
@@ -122,5 +123,8 @@
     <address>TechStore Online - contacto@techstore.test</address>
     <small>Pagina de contacto con formulario avanzado HTML5</small>
   </footer>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

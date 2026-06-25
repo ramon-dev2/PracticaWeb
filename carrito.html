@@ -33,6 +33,7 @@
           <col span="1">
           <col span="1">
           <col span="1">
+          <col span="1">
         </colgroup>
         <thead>
           <tr>
@@ -40,35 +41,22 @@
             <th scope="col">Precio Unitario</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Subtotal</th>
+            <th scope="col">Accion</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>Notebook Pro 15</td>
-            <td>$1199</td>
-            <td>1</td>
-            <td>$1199</td>
-          </tr>
-          <tr>
-            <td>Headset RGB</td>
-            <td>$129</td>
-            <td>2</td>
-            <td>$258</td>
-          </tr>
-          <tr>
-            <td>Mouse Ultra DPI</td>
-            <td>$79</td>
-            <td>1</td>
-            <td>$79</td>
-          </tr>
-        </tbody>
+        <tbody data-cart-items></tbody>
         <tfoot>
           <tr>
-            <th scope="row" colspan="3">Total de compra</th>
-            <td><strong>$1536</strong></td>
+            <th scope="row" colspan="4">Total de compra</th>
+            <td><strong data-cart-total>$0</strong></td>
           </tr>
         </tfoot>
       </table>
+      <div class="cart-actions">
+        <button type="button" data-checkout>Finalizar compra</button>
+        <button type="button" class="button-ghost" data-clear-cart>Vaciar carrito</button>
+      </div>
+      <p class="app-message" data-cart-feedback></p>
     </section>
 
     <section>
@@ -82,5 +70,8 @@
     <address>TechStore Online - Carrito y pagos seguros</address>
     <small>Practica HTML5 - Simulacion de proceso de compra</small>
   </footer>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

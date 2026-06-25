@@ -26,14 +26,20 @@
   <main class="layout">
     <aside>
       <h2>Filtros</h2>
-      <form action="productos.html" method="get" aria-label="Filtros de productos">
+      <form action="productos.html" method="get" aria-label="Filtros de productos" data-filter-form>
+        <fieldset>
+          <legend>Busqueda</legend>
+          <label for="catalogo-busqueda">Producto o descripcion</label>
+          <input id="catalogo-busqueda" name="q" type="search" placeholder="Buscar productos...">
+        </fieldset>
+
         <fieldset>
           <legend>Rango de Precio</legend>
           <label for="precio-min">Precio minimo</label>
-          <input id="precio-min" name="precio_min" type="number" min="0" max="5000" step="10" placeholder="Desde 0">
+          <input id="precio-min" name="precio_min" type="number" min="0" max="2000000" step="10000" placeholder="Desde 0">
 
           <label for="precio-max">Precio maximo</label>
-          <input id="precio-max" name="precio_max" type="number" min="50" max="10000" step="10" placeholder="Hasta 10000">
+          <input id="precio-max" name="precio_max" type="number" min="0" max="2000000" step="10000" placeholder="Hasta 2000000">
         </fieldset>
 
         <fieldset>
@@ -52,6 +58,7 @@
           <legend>Categoria</legend>
           <label for="categoria">Selecciona categoria</label>
           <select id="categoria" name="categoria">
+            <option value="">Todas las categorias</option>
             <optgroup label="Computo">
               <option value="laptops">Laptops</option>
               <option value="accesorios">Accesorios</option>
@@ -59,6 +66,7 @@
             <optgroup label="Movil y entretenimiento">
               <option value="smartphones">Smartphones</option>
               <option value="gaming">Gaming</option>
+              <option value="hogar">Hogar inteligente</option>
             </optgroup>
           </select>
         </fieldset>
@@ -75,21 +83,8 @@
 
     <section>
       <h2>Resultados</h2>
-      <article>
-        <h3>Laptop Creator 14</h3>
-        <p>Procesador de 8 nucleos, 16 GB RAM, SSD 1 TB.</p>
-        <p>Precio: <strong>$1299</strong></p>
-      </article>
-      <article>
-        <h3>Smartphone Zoom M8</h3>
-        <p>Camara 108 MP, bateria de larga duracion.</p>
-        <p>Precio: <strong>$699</strong></p>
-      </article>
-      <article>
-        <h3>Combo Gamer RGB</h3>
-        <p>Teclado mecanico + mouse de alta precision.</p>
-        <p>Precio: <strong>$159</strong></p>
-      </article>
+      <p class="result-count" data-result-count></p>
+      <div class="grid-products catalog-grid" data-product-catalog></div>
     </section>
   </main>
 
@@ -97,5 +92,8 @@
     <address>TechStore Online - Centro de atencion: +00 555 123 456</address>
     <small>Practica academica HTML5 - Pagina de productos</small>
   </footer>
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
